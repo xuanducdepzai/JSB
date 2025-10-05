@@ -1,11 +1,430 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pants Store - Thời Trang Quần Cao Cấp</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h2>wqeqew</h2>
+    Navigation
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">👖</span>
+                <span>Pants Store</span>
+            </div>
+
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Trang Chủ</a></li>
+                <li><a href="#collections" class="nav-link">Bộ Sưu Tập</a></li>
+                <li><a href="#about" class="nav-link">Về Chúng Tôi</a></li>
+                <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cart-btn">
+                    🛒
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    Hero Section
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Phong Cách Của Bạn, Sự Tự Tin Của Bạn</h1>
+                <p class="hero-description">
+                    Khám phá bộ sưu tập quần cao cấp được thiết kế tinh tế,
+                    mang đến sự thoải mái tối đa và phong cách thời thượng cho mọi dịp.
+                </p>
+                <div class="hero-cta">
+                    <a href="#collections" class="btn-primary">
+                        Mua Sắm Ngay
+                        <span>→</span>
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        Tìm Hiểu Thêm
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/placeholder.svg?height=600&width=500" alt="Bộ sưu tập quần cao cấp">
+            </div>
+        </div>
+    </section>
+
+    Features Section
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Chất Liệu Cao Cấp</h3>
+                    <p class="feature-description">
+                        Vải nhập khẩu 100% từ Ý và Nhật Bản,
+                        mang đến cảm giác mềm mại và bền bỉ theo thời gian.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📏</div>
+                    <h3 class="feature-title">Thiết Kế Hoàn Hảo</h3>
+                    <p class="feature-description">
+                        Đường may tỉ mỉ, form dáng chuẩn,
+                        tôn lên vóc dáng và phong cách riêng của bạn.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Giao Hàng Miễn Phí</h3>
+                    <p class="feature-description">
+                        Miễn phí vận chuyển toàn quốc cho đơn hàng từ 500.000đ,
+                        giao hàng nhanh chóng trong 2-3 ngày.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Đổi Trả Dễ Dàng</h3>
+                    <p class="feature-description">
+                        Chính sách đổi trả trong 30 ngày,
+                        hoàn tiền 100% nếu không hài lòng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bộ Sưu Tập Nổi Bật</h2>
+                <p class="section-description">
+                    Khám phá những mẫu quần được yêu thích nhất
+                </p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://cache.maydep.vn/wp-content/uploads/2022/01/quan-tay-cong-so-nam.jpg" alt="Quần Tây Công Sở">
+                        <div class="collection-overlay">
+                            <a href="#" class="collection-btn">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3 class="collection-name">Quần Tây Công Sở</h3>
+                        <p class="collection-price">890.000đ</p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://4men.com.vn/thumbs/2020/11/quan-kaki-tron-can-ban-qk004-mau-ca-phe-18632-p.png" alt="Quần Kaki Casual">
+                        <div class="collection-overlay">
+                            <a href="#" class="collection-btn">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3 class="collection-name">Quần Kaki Casual</h3>
+                        <p class="collection-price">690.000đ</p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://topwat.com/wp-content/uploads/2020/11/quan-jean-nam-4menshop.jpg" alt="Quần Jean Cao Cấp">
+                        <div class="collection-overlay">
+                            <a href="#" class="collection-btn">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3 class="collection-name">Quần Jean Cao Cấp</h3>
+                        <p class="collection-price">790.000đ</p>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <img src="https://www.sporter.vn/wp-content/uploads/2017/06/quan-jogger-nam-360s-lx-den-1-750x800.jpg" alt="Quần Jogger Thể Thao">
+                        <div class="collection-overlay">
+                            <a href="#" class="collection-btn">Xem Chi Tiết</a>
+                        </div>
+                    </div>
+                    <div class="collection-info">
+                        <h3 class="collection-name">Quần Jogger Thể Thao</h3>
+                        <p class="collection-price">590.000đ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    About Section
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/placeholder.svg?height=600&width=550" alt="Về Pants Store">
+            </div>
+            <div class="about-content">
+                <h2 class="about-title">Câu Chuyện Của Chúng Tôi</h2>
+                <p class="about-text">
+                    Pants Store được thành lập với niềm đam mê mang đến những sản phẩm
+                    thời trang chất lượng cao, phù hợp với phong cách sống hiện đại của người Việt.
+                </p>
+                <p class="about-text">
+                    Chúng tôi tin rằng một chiếc quần tốt không chỉ là trang phục,
+                    mà là sự đầu tư cho sự tự tin và phong cách của bạn.
+                    Mỗi sản phẩm đều được chọn lọc kỹ lưỡng về chất liệu,
+                    thiết kế và độ hoàn thiện.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Khách Hàng Hài Lòng</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Sản Phẩm</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Năm Kinh Nghiệm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    Testimonials Section
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+                <p class="section-description">
+                    Hơn 10,000 khách hàng đã tin tưởng và hài lòng
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Chất lượng quần tuyệt vời, form dáng chuẩn và rất thoải mái.
+                        Tôi đã mua 3 chiếc và sẽ tiếp tục ủng hộ!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Minh Tuấn">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Minh Tuấn</div>
+                            <div class="author-title">Giám Đốc Marketing</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Giao hàng nhanh, đóng gói cẩn thận. Quần đẹp hơn cả mong đợi.
+                        Dịch vụ chăm sóc khách hàng rất tốt!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Thu Hà">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Thu Hà</div>
+                            <div class="author-title">Kiến Trúc Sư</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Mình đã thử nhiều shop nhưng chỉ có Pants Store là vừa vặn nhất.
+                        Chất vải mềm mại, không nhăn và rất dễ phối đồ."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="/placeholder.svg?height=50&width=50" alt="Đức Anh">
+                        </div>
+                        <div class="author-info">
+                            <div class="author-name">Đức Anh</div>
+                            <div class="author-title">Nhân Viên IT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    CTA Section
+    <section class="cta">
+        <div class="cta-container">
+            <h2 class="cta-title">Nhận Ưu Đãi Đặc Biệt</h2>
+            <p class="cta-description">
+                Đăng ký ngay để nhận mã giảm giá 15% cho đơn hàng đầu tiên
+                và cập nhật bộ sưu tập mới nhất!
+            </p>
+            <form class="cta-form">
+                <input type="email" class="cta-input" placeholder="Nhập email của bạn" required>
+                <button type="submit" class="cta-button">Đăng Ký</button>
+            </form>
+            <p class="cta-note">
+                * Chúng tôi tôn trọng quyền riêng tư của bạn. Không spam!
+            </p>
+        </div>
+    </section>
+
+    Contact Section
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="contact-title">Liên Hệ Với Chúng Tôi</h2>
+                    <p class="contact-description">
+                        Có câu hỏi? Chúng tôi luôn sẵn sàng hỗ trợ bạn.
+                        Hãy liên hệ qua form bên cạnh hoặc thông tin dưới đây.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Địa chỉ</div>
+                                <div class="contact-value">123 Nguyễn Huệ, Q.1, TP.HCM</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Điện thoại</div>
+                                <div class="contact-value">0901 234 567</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">hello@pantsstore.vn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Họ và tên</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" id="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Tin nhắn</label>
+                        <textarea id="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    Footer
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">👖</span>
+                        <span>Pants Store</span>
+                    </div>
+                    <p class="footer-description">
+                        Thời trang quần cao cấp cho phong cách hiện đại.
+                        Chất lượng - Uy tín - Phong cách.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Sản Phẩm</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Quần Tây</a></li>
+                        <li><a href="#">Quần Kaki</a></li>
+                        <li><a href="#">Quần Jean</a></li>
+                        <li><a href="#">Quần Thể Thao</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Hỗ Trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="#">Chính Sách Đổi Trả</a></li>
+                        <li><a href="#">Bảo Hành</a></li>
+                        <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Về Chúng Tôi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới Thiệu</a></li>
+                        <li><a href="#">Tuyển Dụng</a></li>
+                        <li><a href="#">Tin Tức</a></li>
+                        <li><a href="#">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pants Store. Tất cả quyền được bảo lưu.</p>
+                <div class="footer-payment">
+                    <span>Thanh toán:</span>
+                    <div class="payment-methods">
+                        <span>VISA</span>
+                        <span>MASTER</span>
+                        <span>MOMO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
