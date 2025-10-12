@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <i class="bi bi-shop text-primary"></i> ShopOnline
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Liên hệ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Enhanced product images with gallery -->
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <img id="mainImage" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2c8fbdab-f018-48e8-a171-e1b20ad9c2fd.jpg;maxHeight=1080;maxWidth=900?format=webp" class="img-fluid rounded-3 shadow"
+                        alt="Laptop Gaming">
+                </div>
+                <div class="row g-2">
+                    <div class="col-3">
+                        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2c8fbdab-f018-48e8-a171-e1b20ad9c2fd.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                            class="img-fluid rounded cursor-pointer thumbnail-img" alt="View 1"
+                            onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/69cf6256-27e7-408a-bba2-7243c9b1493e.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                            class="img-fluid rounded cursor-pointer thumbnail-img" alt="View 2"
+                            onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/d5ced1c6-66b1-4c05-85ed-9534548c1c9d.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                            class="img-fluid rounded cursor-pointer thumbnail-img" alt="View 3"
+                            onclick="changeImage(this.src)">
+                    </div>
+                    <div class="col-3">
+                        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/61335932-303c-41cd-8140-109aed80ff68.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                            class="img-fluid rounded cursor-pointer thumbnail-img" alt="View 4"
+                            onclick="changeImage(this.src)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced product information with more details -->
+            <div class="col-lg-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="index.html#products">Sản phẩm</a></li>
+                        <li class="breadcrumb-item active">Laptop Gaming</li>
+                    </ol>
+                </nav>
+
+                <h1 class="display-5 fw-bold mb-3">Laptop Gaming Pro</h1>
+
+                <div class="d-flex align-items-center mb-3">
+                    <div class="text-warning me-3">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <span class="text-dark ms-2">4.5/5</span>
+                    </div>
+                    <span class="text-muted">|</span>
+                    <span class="ms-3 text-muted">156 đánh giá</span>
+                    <span class="text-muted mx-2">|</span>
+                    <span class="text-muted">Đã bán: 234</span>
+                </div>
+
+                <div class="bg-light p-3 rounded mb-4">
+                    <div class="d-flex align-items-center">
+                        <span class="text-decoration-line-through text-muted fs-5 me-3">18.990.000đ</span>
+                        <h2 class="text-primary mb-0 me-3">15.990.000đ</h2>
+                        <span class="badge bg-danger">-16%</span>
+                    </div>
+                </div>
+
+                <h5 class="mb-3">Mô tả sản phẩm:</h5>
+                <p class="text-muted">Laptop gaming hiệu năng cao với cấu hình mạnh mẽ, màn hình sắc nét 144Hz, phù hợp
+                    cho game thủ chuyên nghiệp và công việc đồ họa nặng. Thiết kế hiện đại với hệ thống tản nhiệt tiên
+                    tiến.</p>
+
+                <h5 class="mb-3">Thông số kỹ thuật:</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>CPU:</strong>
+                        Intel Core i7 Gen 12 (12 nhân, 20 luồng)</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>RAM:</strong> 16GB
+                        DDR5 4800MHz (Nâng cấp tối đa 32GB)</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Ổ cứng:</strong>
+                        512GB SSD NVMe PCIe 4.0</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Card đồ
+                            họa:</strong> NVIDIA RTX 3060 6GB GDDR6</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Màn hình:</strong>
+                        15.6" Full HD IPS 144Hz, 100% sRGB</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pin:</strong>
+                        90Wh, sạc nhanh 150W</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Trọng
+                            lượng:</strong> 2.3kg</li>
+                </ul>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Số lượng:</label>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" onclick="decreaseQty()">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                            <input type="number" id="quantity" class="form-control text-center" value="1" min="1"
+                                max="10">
+                            <button class="btn btn-outline-secondary" type="button" onclick="increaseQty()">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Màu sắc:</label>
+                        <select class="form-select">
+                            <option>Đen</option>
+                            <option>Bạc</option>
+                            <option>Xám</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-primary btn-lg" onclick="addToCart()">
+                        <i class="bi bi-cart-plus me-2"></i>Thêm Vào Giỏ Hàng
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg">
+                        <i class="bi bi-lightning me-2"></i>Mua Ngay
+                    </button>
+                </div>
+
+                <div class="border rounded p-3">
+                    <div class="row g-3 text-center">
+                        <div class="col-4">
+                            <i class="bi bi-truck fs-3 text-primary"></i>
+                            <p class="small mb-0 mt-2">Miễn phí vận chuyển</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-shield-check fs-3 text-primary"></i>
+                            <p class="small mb-0 mt-2">Bảo hành 24 tháng</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-arrow-repeat fs-3 text-primary"></i>
+                            <p class="small mb-0 mt-2">Đổi trả 7 ngày</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Added reviews section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Đánh Giá Từ Khách Hàng</h3>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div>
+                                <h6 class="mb-1">Nguyễn Văn A</h6>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted">2 ngày trước</small>
+                        </div>
+                        <p class="mb-0">Sản phẩm rất tốt, chơi game mượt mà, màn hình đẹp. Giao hàng nhanh, đóng gói cẩn
+                            thận. Rất hài lòng!</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div>
+                                <h6 class="mb-1">Trần Thị B</h6>
+                                <div class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                            <small class="text-muted">1 tuần trước</small>
+                        </div>
+                        <p class="mb-0">Máy chạy tốt, cấu hình mạnh. Tuy nhiên hơi nóng khi chơi game lâu. Nhìn chung
+                            vẫn đáng giá tiền.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 ShopOnline. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+
+        function increaseQty() {
+            const input = document.getElementById('quantity');
+            if (input.value < 10) {
+                input.value = parseInt(input.value) + 1;
+            }
+        }
+
+        function decreaseQty() {
+            const input = document.getElementById('quantity');
+            if (input.value > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+
+        function addToCart() {
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        }
+    </script>
+</body>
+
+</html>

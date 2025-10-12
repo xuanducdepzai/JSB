@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <i class="bi bi-shop text-primary"></i> ShopOnline
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Liên hệ</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="cart.html">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-outline-primary btn-sm" href="login.html">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="mb-4">
+            <i class="bi bi-cart3 me-2"></i>Giỏ Hàng Của Bạn
+        </h2>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <!-- Cart Item 1 -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="row align-items-center g-3">
+                            <div class="col-md-2">
+                                <img src="/placeholder.svg?height=150&width=150" class="img-fluid rounded" alt="Laptop">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="mb-2">Laptop Gaming Pro</h5>
+                                <p class="text-muted small mb-1">Màu: Đen</p>
+                                <p class="text-muted small mb-0">SKU: LT-001</p>
+                            </div>
+                            <div class="col-md-2">
+                                <h5 class="text-primary mb-0">15.990.000đ</h5>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="input-group input-group-sm">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="updateQty(1, -1)">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <input type="number" id="qty1" class="form-control text-center" value="1" min="1"
+                                        readonly>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="updateQty(1, 1)">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <button class="btn btn-outline-danger btn-sm" onclick="removeItem(1)">
+                                    <i class="bi bi-trash"></i> Xóa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="row align-items-center g-3">
+                            <div class="col-md-2">
+                                <img src="/placeholder.svg?height=150&width=150" class="img-fluid rounded"
+                                    alt="Tai nghe">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="mb-2">Tai Nghe Bluetooth</h5>
+                                <p class="text-muted small mb-1">Màu: Trắng</p>
+                                <p class="text-muted small mb-0">SKU: TN-002</p>
+                            </div>
+                            <div class="col-md-2">
+                                <h5 class="text-primary mb-0">1.290.000đ</h5>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="input-group input-group-sm">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="updateQty(2, -1)">
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+                                    <input type="number" id="qty2" class="form-control text-center" value="1" min="1"
+                                        readonly>
+                                    <button class="btn btn-outline-secondary" type="button" onclick="updateQty(2, 1)">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <button class="btn btn-outline-danger btn-sm" onclick="removeItem(2)">
+                                    <i class="bi bi-trash"></i> Xóa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Added continue shopping button -->
+                <div class="mt-4">
+                    <a href="index.html#products" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-left me-2"></i>Tiếp Tục Mua Sắm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Enhanced order summary with more details -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm sticky-top" style="top: 20px;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">
+                            <i class="bi bi-receipt me-2"></i>Tổng Đơn Hàng
+                        </h5>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Tạm tính (2 sản phẩm):</span>
+                            <span id="subtotal">17.280.000đ</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Giảm giá:</span>
+                            <span class="text-success">-0đ</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Phí vận chuyển:</span>
+                            <span>30.000đ</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <small class="text-muted">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Miễn phí vận chuyển cho đơn hàng trên 500.000đ
+                            </small>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mb-4">
+                            <strong class="fs-5">Tổng cộng:</strong>
+                            <strong class="text-primary fs-4" id="total">17.310.000đ</strong>
+                        </div>
+
+                        <!-- Added voucher input -->
+                        <div class="mb-3">
+                            <label class="form-label small">Mã giảm giá:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Nhập mã">
+                                <button class="btn btn-outline-secondary" type="button">Áp dụng</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 btn-lg mb-2">
+                            <i class="bi bi-credit-card me-2"></i>Thanh Toán
+                        </button>
+
+                        <div class="text-center mt-3">
+                            <small class="text-muted">
+                                <i class="bi bi-shield-check me-1"></i>
+                                Thanh toán an toàn & bảo mật
+                            </small>
+                        </div>
+
+                        <!-- Added payment methods -->
+                        <div class="mt-4 pt-3 border-top">
+                            <p class="small text-muted mb-2">Phương thức thanh toán:</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-credit-card"></i> Thẻ
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-wallet2"></i> Ví điện tử
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-cash"></i> COD
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 ShopOnline. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateQty(itemId, change) {
+            const input = document.getElementById('qty' + itemId);
+            let newValue = parseInt(input.value) + change;
+            if (newValue >= 1) {
+                input.value = newValue;
+                updateTotal();
+            }
+        }
+
+        function removeItem(itemId) {
+            if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+                alert('Đã xóa sản phẩm khỏi giỏ hàng!');
+                updateTotal();
+            }
+        }
+
+        function updateTotal() {
+            // Simple calculation for demo
+            const qty1 = parseInt(document.getElementById('qty1').value);
+            const qty2 = parseInt(document.getElementById('qty2').value);
+            const subtotal = (15990000 * qty1) + (1290000 * qty2);
+            const shipping = 30000;
+            const total = subtotal + shipping;
+
+            document.getElementById('subtotal').textContent = subtotal.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('total').textContent = total.toLocaleString('vi-VN') + 'đ';
+        }
+    </script>
+</body>
+
+</html>
