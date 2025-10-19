@@ -13,7 +13,7 @@
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand fw-bold fs-4" href="index.html">
                 <i class="bi bi-shop text-primary"></i> ShopOnline
             </a>
@@ -21,16 +21,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="input-group mx-auto" style="max-width: 400px;">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm...">
+                    <button class="btn btn-primary" type="button">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+                    <!-- Updated link to point to about.html -->
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
                     <li class="nav-item">
                         <a class="nav-link position-relative" href="cart.html">
                             <i class="bi bi-cart3 fs-5"></i>
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                2
                             </span>
                         </a>
                     </li>
@@ -42,420 +50,459 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
+    <section class="banner-section">
+        <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-3 fw-bold mb-4">Mua Sắm Thông Minh<br>Giá Cả Hợp Lý</h1>
-                    <p class="lead mb-4">Khám phá hàng ngàn sản phẩm công nghệ chính hãng với giá tốt nhất thị trường.
-                        Giao hàng nhanh chóng, đổi trả dễ dàng.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#products" class="btn btn-primary btn-lg px-4">
-                            <i class="bi bi-bag-check me-2"></i>Mua Sắm Ngay
-                        </a>
-                        <a href="#products" class="btn btn-outline-secondary btn-lg px-4">
-                            <i class="bi bi-info-circle me-2"></i>Tìm Hiểu Thêm
-                        </a>
-                    </div>
+                <div class="col-lg-8">
+                    <h2 class="mb-2">Khám Phá Hàng Ngàn Sản Phẩm Công Nghệ</h2>
+                    <p class="mb-0">Giá tốt nhất, giao hàng nhanh, đổi trả dễ dàng</p>
                 </div>
-                <div class="col-lg-6 d-none d-lg-block">
-                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                        <!-- Dấu chấm -->
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"></button>
-                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"></button>
-                        </div>
-
-                        <!-- Ảnh -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01alc94D1vTkPDnYanh_!!6000000006174-0-tps-1976-688.jpg_2200x2200q80.jpg_.avif" alt="Ảnh 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://img.lazcdn.com/us/media/13423a76814c3de6b17b3c2093ab8bef-1976-688.jpg_2200x2200q80.jpg_.avif" alt="Ảnh 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN0124NuAT1INY1tzm9yL_!!6000000000881-0-tps-1976-688.jpg_2200x2200q80.jpg_.avif" alt="Ảnh 3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://img.lazcdn.com/g/tps/imgextra/i2/O1CN01T2aDEi1oDzTA2h9aq_!!6000000005192-0-tps-1976-688.jpg_2200x2200q80.jpg_.avif">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01ahcTzn1pfl694bOmn_!!6000000005388-0-tps-1976-688.jpg_2200x2200q80.jpg_.avif">
-                            </div>
-                        </div>
-
-                        <!-- Nút điều khiển -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
+                <div class="col-lg-4 text-end">
+                    <span class="badge bg-light text-dark fs-6">
+                        <i class="bi bi-lightning-fill"></i> Flash Sale Hôm Nay
+                    </span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
+    <section id="products" class="py-4">
+        <div class="container-fluid">
             <div class="row g-4">
-                <div class="col-md-3 text-center">
-                    <div class="feature-icon mb-3">
-                        <i class="bi bi-truck fs-1 text-primary"></i>
-                    </div>
-                    <h5>Giao Hàng Nhanh</h5>
-                    <p class="text-muted">Miễn phí vận chuyển cho đơn hàng trên 500k</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="feature-icon mb-3">
-                        <i class="bi bi-shield-check fs-1 text-primary"></i>
-                    </div>
-                    <h5>Thanh Toán An Toàn</h5>
-                    <p class="text-muted">Bảo mật thông tin 100%</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="feature-icon mb-3">
-                        <i class="bi bi-arrow-repeat fs-1 text-primary"></i>
-                    </div>
-                    <h5>Đổi Trả Dễ Dàng</h5>
-                    <p class="text-muted">Đổi trả trong vòng 7 ngày</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <div class="feature-icon mb-3">
-                        <i class="bi bi-headset fs-1 text-primary"></i>
-                    </div>
-                    <h5>Hỗ Trợ 24/7</h5>
-                    <p class="text-muted">Tư vấn nhiệt tình, chuyên nghiệp</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="col-lg-2">
+                    <div class="sidebar-filter">
+                        <h5 class="mb-4">
+                            <i class="bi bi-funnel me-2"></i>Bộ Lọc
+                        </h5>
 
-    <!-- Products Section -->
-    <section id="products" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">Sản Phẩm Nổi Bật</h2>
-                <p class="lead text-muted">Những sản phẩm công nghệ được yêu thích nhất</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Product 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="position-relative">
-                            <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2c8fbdab-f018-48e8-a171-e1b20ad9c2fd.jpg;maxHeight=1080;maxWidth=900?format=webp"
-                                class="card-img-top" alt="Laptop Gaming">
-                            <span class="badge bg-danger position-absolute top-0 end-0 m-3">Hot</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Laptop Gaming Pro</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
-                                </div>
+                        <div class="filter-group">
+                            <h6>Danh Mục</h6>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat1" checked>
+                                <label for="cat1">Tất cả</label>
                             </div>
-                            <p class="text-muted small mb-3">Intel Core i7, RTX 3060, 16GB RAM</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="text-decoration-line-through text-muted small">18.990.000đ</span>
-                                    <h4 class="text-primary mb-0">15.990.000đ</h4>
-                                </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat2">
+                                <label for="cat2">Laptop</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat3">
+                                <label for="cat3">Điện thoại</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat4">
+                                <label for="cat4">Tai nghe</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat5">
+                                <label for="cat5">Đồng hồ</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="cat6">
+                                <label for="cat6">Phụ kiện</label>
                             </div>
                         </div>
+
+                        <div class="filter-group">
+                            <h6>Khoảng Giá</h6>
+                            <div class="filter-item">
+                                <input type="checkbox" id="price1">
+                                <label for="price1">Dưới 1 triệu</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="price2">
+                                <label for="price2">1 - 5 triệu</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="price3">
+                                <label for="price3">5 - 10 triệu</label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="price4">
+                                <label for="price4">Trên 10 triệu</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h6>Đánh Giá</h6>
+                            <div class="filter-item">
+                                <input type="checkbox" id="rating1">
+                                <label for="rating1">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i> Trở lên
+                                </label>
+                            </div>
+                            <div class="filter-item">
+                                <input type="checkbox" id="rating2">
+                                <label for="rating2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i> Trở lên
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 mb-2">Áp Dụng</button>
+                        <button class="btn btn-outline-secondary w-100">Xóa Bộ Lọc</button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <div class="position-relative">
-                            <img src="https://media.techz.vn/resize_x700x/media2019/source/1-Tung/1-ngay%205%20thang%205/galaxy-m17-2.jpg"
+                <div class="col-lg-10">
+                    <div class="sort-bar">
+                        <div>
+                            <span class="text-muted">Hiển thị <strong>12</strong> sản phẩm</span>
+                        </div>
+                        <div>
+                            <label class="me-2">Sắp xếp:</label>
+                            <select class="form-select d-inline-block" style="width: auto;">
+                                <option>Mới nhất</option>
+                                <option>Bán chạy nhất</option>
+                                <option>Giá thấp đến cao</option>
+                                <option>Giá cao đến thấp</option>
+                                <option>Đánh giá cao nhất</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-grid">
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative">
+                                <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/2c8fbdab-f018-48e8-a171-e1b20ad9c2fd.jpg;maxHeight=1080;maxWidth=900?format=webp"
+                                    class="card-img-top" alt="Laptop Gaming">
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-3">Hot</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Laptop Gaming Pro</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Intel Core i7, RTX 3060, 16GB RAM</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-decoration-line-through text-muted small">18.990.000đ</span>
+                                        <h4 class="text-primary mb-0">15.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative">
+                                <img src="https://media.techz.vn/resize_x700x/media2019/source/1-Tung/1-ngay%205%20thang%205/galaxy-m17-2.jpg"
+                                    class="card-img-top" alt="Điện thoại">
+                                <span class="badge bg-success position-absolute top-0 end-0 m-3">New</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Điện Thoại Thông Minh</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">6.7" AMOLED, 128GB, Camera 50MP</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">8.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://cf.shopee.vn/file/sg-11134201-22100-tyb9vvkk66iva2" class="card-img-top"
+                                alt="Tai nghe">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Tai Nghe Bluetooth</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Chống ồn chủ động, Pin 30h</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">1.290.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://toplist.vn/images/800px/dong-ho-thong-minh-xiaomi-amazfit-gts-3-1083236.jpg"
+                                class="card-img-top" alt="Đồng hồ">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Đồng Hồ Thông Minh</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Theo dõi sức khỏe, GPS, Chống nước</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">3.490.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://vitinhrachgia.com/wp-content/uploads/2025/02/53289_may_tinh_bang_samsung_galaxy_tab_a9_wifi_x210_den_thumb-1.jpg"
+                                class="card-img-top" alt="Máy tính bảng">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Máy Tính Bảng</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">10.5" Retina, 256GB, Bút cảm ứng</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">6.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.uHlV9O_X-qK29kgaq1ALAQHaHa?pid=Api&P=0&h"
+                                class="card-img-top" alt="Chuột">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Chuột Không Dây</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">Ergonomic, DPI 3200, Pin 12 tháng</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">390.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <div class="position-relative">
+                                <img src="https://m.media-amazon.com/images/I/81cbWcTR0sL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+                                    class="card-img-top" alt="Laptop Gaming">
+                                <span class="badge bg-warning position-absolute top-0 end-0 m-3">-20%</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">ASUS TUF A18 Gaming Laptop</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">64 GB DDR5 RAM, 4 TB PCle SSD,</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span class="text-decoration-line-through text-muted small">24.990.000đ</span>
+                                        <h4 class="text-primary mb-0">19.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.bBZYgdT0639qLgMZQ58dswHaHd?pid=Api&P=0&h=220"
                                 class="card-img-top" alt="Điện thoại">
-                            <span class="badge bg-success position-absolute top-0 end-0 m-3">New</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Điện Thoại Thông Minh</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Galaxy S25 Ultra</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-3">6.9 inches" Dynamic AMOLED 2X,12 MP</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">12.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-3">6.7" AMOLED, 128GB, Camera 50MP</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="text-primary mb-0">8.990.000đ</h4>
-                                </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Product 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <img src="https://cf.shopee.vn/file/sg-11134201-22100-tyb9vvkk66iva2" class="card-img-top"
-                            alt="Tai nghe">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Tai Nghe Bluetooth</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/r/group_111_1_1.png"
+                                class="card-img-top" alt="Tai nghe">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Tai nghe Bluetooth Apple AirPods </h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-muted small mb-3">Chống ồn chủ động, Pin 30h</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="text-primary mb-0">1.290.000đ</h4>
+                                <p class="text-muted small mb-3">Chống ồn AI, Pin 50h, Âm thanh Hi-Fi</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">2.490.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
                                 </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Product 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <img src="https://toplist.vn/images/800px/dong-ho-thong-minh-xiaomi-amazfit-gts-3-1083236.jpg"
-                            class="card-img-top" alt="Đồng hồ">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Đồng Hồ Thông Minh</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/g/a/garmin_17__1_2.png"
+                                class="card-img-top" alt="Đồng hồ">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Đồng hồ Garmin Vivomove Sport Dây Silicone</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-muted small mb-3">Theo dõi sức khỏe, GPS, Chống nước</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="text-primary mb-0">3.490.000đ</h4>
+                                <p class="text-muted small mb-3">Chống nước 5ATM, Pin 14 ngày</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">4.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
                                 </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Product 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <img src="https://vitinhrachgia.com/wp-content/uploads/2025/02/53289_may_tinh_bang_samsung_galaxy_tab_a9_wifi_x210_den_thumb-1.jpg"
-                            class="card-img-top" alt="Máy tính bảng">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Máy Tính Bảng</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-half"></i>
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/h/u/huawei-matepad-pro-12-2-inch_3.jpg"
+                                class="card-img-top" alt="Máy tính bảng">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Máy tính bảng Huawei MatePad Pro</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-muted small mb-3">10.5" Retina, 256GB, Bút cảm ứng</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="text-primary mb-0">6.990.000đ</h4>
+                                <p class="text-muted small mb-3">12.2 inches"Tandem OLED PaperMatte,M50</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">22.990.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
                                 </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Product 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card product-card h-100 border-0 shadow-sm">
-                        <img src="https://tse3.mm.bing.net/th/id/OIP.uHlV9O_X-qK29kgaq1ALAQHaHa?pid=Api&P=0&h"
-                            class="card-img-top" alt="Chuột">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title mb-0">Chuột Không Dây</h5>
-                                <div class="text-warning">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
+                        <div class="card product-card h-100 border-0 shadow-sm">
+                            <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:358:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/c/h/chuot-choi-game-co-day-logitech-g502-hero.png"
+                                class="card-img-top" alt="Chuột">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title mb-0">Chuột Gaming Logitech G502 Hero</h5>
+                                    <div class="text-warning">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-muted small mb-3">Ergonomic, DPI 3200, Pin 12 tháng</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="text-primary mb-0">390.000đ</h4>
+                                <p class="text-muted small mb-3">16000 DPI, RGB, Wireless 2.4GHz</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h4 class="text-primary mb-0">690.000đ</h4>
+                                    </div>
+                                    <a href="product-detail.html" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>Xem
+                                    </a>
                                 </div>
-                                <a href="product-detail.html" class="btn btn-primary">
-                                    <i class="bi bi-eye me-1"></i>Xem
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="text-center mt-5">
-                <a href="#products" class="btn btn-outline-primary btn-lg px-5">Xem Tất Cả Sản Phẩm</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://vnanet.vn/Data/Articles/2020/02/04/4430669/vna_potal_nha_may_san_xuat_thiet_bi_dien_tu_thong_minh_cua_vinsmart_san_suat_26_trieu_thiet_binam_stand.jpg"
-                        class="img-fluid rounded-4 shadow" alt="About Us">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4">Về ShopOnline</h2>
-                    <p class="lead mb-4">Chúng tôi là đơn vị tiên phong trong lĩnh vực thương mại điện tử tại Việt Nam,
-                        mang đến trải nghiệm mua sắm trực tuyến tốt nhất cho khách hàng.</p>
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
-                                <span>Sản phẩm chính hãng</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
-                                <span>Giá cả cạnh tranh</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
-                                <span>Giao hàng toàn quốc</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center">
-                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
-                                <span>Bảo hành uy tín</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">Khách Hàng Nói Gì</h2>
-                <p class="lead text-muted">Hàng nghìn khách hàng hài lòng</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="text-warning mb-3">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="mb-3">"Sản phẩm chất lượng, giao hàng nhanh chóng. Tôi rất hài lòng với dịch vụ
-                                của ShopOnline!"</p>
-                            <div class="d-flex align-items-center">
-                                <img src="https://tse2.mm.bing.net/th/id/OIP.cdiOwyEUr0bzqlPydDxNpAHaHX?pid=Api&P=0&h=220"
-                                    class="rounded-circle me-3" alt="Customer" width="50">
-                                <div>
-                                    <h6 class="mb-0">Nguyễn Văn A</h6>
-                                    <small class="text-muted">Khách hàng thân thiết</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="text-warning mb-3">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="mb-3">"Giá cả hợp lý, nhiều chương trình khuyến mãi hấp dẫn. Sẽ tiếp tục ủng hộ!"
-                            </p>
-                            <div class="d-flex align-items-center">
-                                <img src="https://tse2.mm.bing.net/th/id/OIP.vg41yG82qw84ziz5nS-CWQHaHa?pid=Api&P=0&h=220"
-                                    class="rounded-circle me-3" alt="Customer" width="50">
-                                <div>
-                                    <h6 class="mb-0">Trần Thị B</h6>
-                                    <small class="text-muted">Khách hàng mới</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="text-warning mb-3">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <p class="mb-3">"Đội ngũ hỗ trợ nhiệt tình, giải đáp thắc mắc nhanh chóng. Rất chuyên
-                                nghiệp!"</p>
-                            <div class="d-flex align-items-center">
-                                <img src="https://tse4.mm.bing.net/th/id/OIP.XGP1hYxxTZSgi6Em4Lg3lAHaHa?pid=Api&P=0&h=220"
-                                    class="rounded-circle me-3" alt="Customer" width="50">
-                                <div>
-                                    <h6 class="mb-0">Lê Văn C</h6>
-                                    <small class="text-muted">Khách hàng VIP</small>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="pagination-section">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -492,7 +539,7 @@
                     <h5 class="mb-3">
                         <i class="bi bi-shop text-primary"></i> ShopOnline
                     </h5>
-                    <p class="text-muted">Cửa hàng trực tuyến uy tín hàng đầu Việt Nam, chuyên cung cấp các sản phẩm
+                    <p class="text-white">Cửa hàng trực tuyến uy tín hàng đầu Việt Nam, chuyên cung cấp các sản phẩm
                         công nghệ chính hãng.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
@@ -504,7 +551,8 @@
                 <div class="col-lg-2 col-md-6">
                     <h5 class="mb-3">Về Chúng Tôi</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Giới thiệu</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">Giới thiệu</a>
+                        </li>
                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tuyển dụng</a></li>
                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tin tức</a></li>
                         <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Liên hệ</a></li>
